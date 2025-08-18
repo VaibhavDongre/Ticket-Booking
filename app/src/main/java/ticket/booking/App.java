@@ -3,10 +3,24 @@
  */
 package ticket.booking;
 
+import ticket.booking.services.UserBookingService;
+
+import java.io.IOException;
+import java.util.Scanner;
+
 public class App {
 
     public static void main(String[] args) {
-
+        System.out.println("Running Train Booking System");
+        Scanner scanner = new Scanner(System.in);
+        int option = 0;
+        UserBookingService userBookingService;
+        try{
+            userBookingService = new UserBookingService();
+        } catch (IOException ex){
+            System.out.println("There something wrong....");
+            return;
+        }
 
     }
 }
